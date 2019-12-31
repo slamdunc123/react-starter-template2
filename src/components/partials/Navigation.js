@@ -11,10 +11,12 @@ import Brand from '../partials/Brand';
 
 const Navigation = () => {
     const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
+    const [burgerIcon, setBurgerIcon] = useState(true);
 
     // toggle burger menu when clicked
     const toggleBurgerMenu = () => {
         setIsBurgerMenuOpen(!isBurgerMenuOpen);
+        setBurgerIcon(!burgerIcon);
     }
 
     // close burger menu when menu link is clicked
@@ -26,72 +28,67 @@ const Navigation = () => {
 
     return (
         <div>
+            {/* navigation menu */}
             <div className="nav-container">
                 <Brand />
                 <div className="nav-menu">
                     <NavLink 
                     className='nav-link' 
-                    onClick={e => {
-                        closeBurgerMenu(e)
-                    }}
                     exact to='/'>
                         Home
                     </NavLink>
                     <NavLink 
                     className='nav-link'
-                    onClick={e => {
-                        closeBurgerMenu(e)
-                    }} 
                     exact to='/about'>
                         About
                     </NavLink>
                     <NavLink 
                     className='nav-link'
-                    onClick={e => {
-                        closeBurgerMenu(e)
-                    }} 
                     exact to='/contact'>
                         Contact
                     </NavLink>
                 </div>
-                <div className='nav-burger'>
-					<i className='fas fa-bars' onClick={toggleBurgerMenu}></i>
+                <div className={`nav-burger ${burgerIcon ? 'opened' : ''}`}>
+                    {
+                        burgerIcon 
+                        ? 
+                        <i className={'fas fa-bars'} onClick={toggleBurgerMenu}></i>
+                        :
+                        <i className={'fas fa-times opened'} onClick={toggleBurgerMenu}></i>
+                    }
 				</div>
-            </div>
-
-            {isBurgerMenuOpen ? (
-                <div className="nav-mobile-menu">
+                
+                {/* navigation mobile menu  */}
+                </div>
+                    <div className={`nav-mobile-menu ${isBurgerMenuOpen ? 'opened' : ''}`}>
                     <NavLink
-                    className="nav-link"
-                    onClick={e => {
-                        closeBurgerMenu(e);
-                    }}
-                    exact to='/'
-                    >
-                        Home
+                        className="nav-link"
+                        onClick={e => {
+                            closeBurgerMenu(e);
+                        }}
+                        exact to='/'
+                        >
+                            Home
                     </NavLink>
                     <NavLink
-                    className="nav-link"
-                    onClick={e => {
-                        closeBurgerMenu(e);
-                    }}
-                    exact to='/about'
-                    >
-                        About
+                        className="nav-link"
+                        onClick={e => {
+                            closeBurgerMenu(e);
+                        }}
+                        exact to='/about'
+                        >
+                            About
                     </NavLink>
                     <NavLink
-                    className="nav-link"
-                    onClick={e => {
-                        closeBurgerMenu(e);
-                    }}
-                    exact to='/contact'
-                    >
-                        Contact
+                        className="nav-link"
+                        onClick={e => {
+                            closeBurgerMenu(e);
+                        }}
+                        exact to='/contact'
+                        >
+                            Contact
                     </NavLink>
                 </div>
-            ) : (
-                ''
-            )}
         </div>
     )
 }

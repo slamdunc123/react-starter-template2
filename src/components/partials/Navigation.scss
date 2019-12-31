@@ -13,6 +13,12 @@
     align-self: flex-end;
     padding: 0.5rem;
     color: $text-color;
+    transition: all 0.5s ease-in-out;
+
+    &.opened {
+        transform: rotate(-180deg) scaleX(-1) ;
+        // transform: scaleX(-1);
+    }
 
     @media (min-width: 576px) {
         display: none;
@@ -34,13 +40,13 @@
     }
 
     @media (max-width: 575px) {
-        display: none;;
+        display: none;
     }
 }
 
 .nav-mobile-menu {
     width: 100vw;
-    height: 100px;
+    height: 0;
     background-color: rgba(darken($base-color, 25%), 0.9);
     position: absolute;
     top: 43px;
@@ -48,6 +54,15 @@
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+
+    &.opened {
+        height: 100px;
+        opacity: 1;
+        visibility: visible;
+    }
 
     a {
         color: $text-color;
