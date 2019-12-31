@@ -1,3 +1,5 @@
+@import '../../scss/variables.scss';
+
 .home-section {
 	display: flex;
 	flex-direction: column;
@@ -29,7 +31,7 @@
 }
 
 #home-article__one {
-	background-color: lightblue;
+	background-color: rgba(darken($base-color, 10%), 0.9);
 	color: #fff;
 
 	@media (min-width: 768px) {
@@ -38,7 +40,7 @@
 }
 
 #home-article__two {
-	background-color: lightgrey;
+	background-color: rgba(darken($base-color, 15%), 0.9);
 	color: #fff;
 
 	@media (min-width: 768px) {
@@ -47,7 +49,7 @@
 }
 
 #home-article__three {
-	background-color: lightsteelblue;
+	background-color: rgba(darken($base-color, 20%), 0.9);
 	color: #fff;
 
 	@media (min-width: 768px) {
@@ -56,7 +58,7 @@
 }
 
 #home-article__four {
-	background-color: lightsalmon;
+	background-color: rgba(lighten($base-color, 10%), 0.9);
 	color: #fff;
 
 	@media (min-width: 768px) {
@@ -65,10 +67,19 @@
 }
 
 #home-article__five {
-	background-color: lightgreen;
+	background-color: rgba(lighten($base-color, 15%), 0.9);
 	color: #fff;
 
 	@media (min-width: 768px) {
 		flex: 2;
+	}
+}
+
+#home-article__six {
+	background-color: rgba(lighten($base-color, 20%), 0.9);
+	color: #fff;
+
+	@media (min-width: 768px) {
+		flex: 1;
 	}
 }

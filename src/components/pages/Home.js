@@ -79,6 +79,21 @@ const Home = () => {
 					</div>
 				</article>
 			</section>
+            <section className='home-section'>
+                <article className='home-article' id='home-article__six'>
+					<div className='home-article__heading'>
+						<h4>Home Article Heading 6</h4>
+					</div>
+					<div className='home-article__body'>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+							Temporibus est laborum molestiae! Sequi voluptas velit vitae ea
+							possimus recusandae? Nemo reiciendis laudantium consequatur fuga,
+							officiis facere qui dolorem quia earum?
+						</p>
+					</div>
+				</article>
+            </section>
         </div>
     )
 }
