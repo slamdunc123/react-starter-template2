@@ -1,0 +1,64 @@
+@import '../../scss/variables.scss';
+
+.nav-container {
+    display: flex;
+    width: 100vw;
+    background-color: $base-color;
+    justify-content: space-between;
+}
+
+.nav-burger {
+    margin: 0 1rem 0 0;
+    font-size: 1.5rem;
+    align-self: flex-end;
+    padding: 0.5rem;
+    color: $text-color;
+
+    @media (min-width: 576px) {
+        display: none;
+    }
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 1rem;
+
+    a {
+        text-decoration: none;
+        padding: 0.5rem;
+        color: $text-color;
+
+        &:hover {
+            color: darken($text-color, 25%);
+        }
+    }
+
+    @media (max-width: 575px) {
+        display: none;;
+    }
+}
+
+.nav-mobile-menu {
+    width: 100vw;
+    height: 100px;
+    background-color: rgba(darken($base-color, 25%), 0.9);
+    position: absolute;
+    top: 43px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+
+    a {
+        color: $text-color;
+        text-decoration: none;
+
+        &:hover {
+            color: darken($text-color, 25%);
+        }
+    }
+
+    @media (min-width: 576px) {
+        display: none;
+    }
+}
