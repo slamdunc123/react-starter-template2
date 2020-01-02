@@ -11,7 +11,7 @@ import Brand from '../partials/Brand';
 
 const Navigation = () => {
     const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
-    const [burgerIcon, setBurgerIcon] = useState(true);
+    const [burgerIcon, setBurgerIcon] = useState(false);
 
     // toggle burger menu when clicked
     const toggleBurgerMenu = () => {
@@ -52,9 +52,9 @@ const Navigation = () => {
                     {
                         burgerIcon 
                         ? 
-                        <i className={'fas fa-bars'} onClick={toggleBurgerMenu}></i>
+                        <i className={'fas fa-times'} onClick={toggleBurgerMenu}></i>
                         :
-                        <i className={'fas fa-times opened'} onClick={toggleBurgerMenu}></i>
+                        <i className={'fas fa-bars'} onClick={toggleBurgerMenu}></i>
                     }
 				</div>
                 
