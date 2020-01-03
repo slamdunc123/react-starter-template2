@@ -1,13 +1,15 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import rootReducer from '../reducers/rootReducer';
 import thunk from 'redux-thunk';
+import logger from 'redux-logger';
 
 // set initial state 
 const initialState = {};
 
 // set middleware 
 const middleware = [
-    thunk
+    thunk,
+    logger
 ]
 
 // create store variables

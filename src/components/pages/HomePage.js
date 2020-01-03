@@ -1,11 +1,11 @@
 import React from 'react'
 
 // styles 
-import './Home.scss';
+import './HomePage.scss';
 
-const Home = () => {
-    return (
-        <div className="home-container">
+const HomePage = () => {
+	return (
+		<div className="home-container">
 			<section className='home-section'>
 				<article className='home-article' id='home-article__one'>
 					<div className='home-article__heading'>
@@ -79,8 +79,8 @@ const Home = () => {
 					</div>
 				</article>
 			</section>
-            <section className='home-section'>
-                <article className='home-article' id='home-article__six'>
+			<section className='home-section'>
+				<article className='home-article' id='home-article__six'>
 					<div className='home-article__heading'>
 						<h4>Home Article Heading 6</h4>
 					</div>
@@ -93,9 +93,9 @@ const Home = () => {
 						</p>
 					</div>
 				</article>
-            </section>
-        </div>
-    )
+			</section>
+		</div>
+	)
 }
 
-export default Home;
+export default HomePage;
