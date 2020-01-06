@@ -1,5 +1,5 @@
 // types 
-import actionTypes from '../actions/actionTypes';
+import productTypes from './productTypes';
 
 // set initial state 
 const initialState = {
@@ -7,17 +7,17 @@ const initialState = {
 }
 
 const productsReducer = (state = initialState, action) => {
-    switch(action.type){
+    switch (action.type) {
         // read products 
-        case actionTypes.READ_PRODUCTS:
-           
+        case productTypes.READ_PRODUCTS:
+
             return {
                 ...state,
                 products: action.payload
             }
 
         default:
-        return state;
+            return state;
     }
 }
 
