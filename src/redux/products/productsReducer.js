@@ -1,5 +1,5 @@
 // types 
-import productTypes from './productTypes';
+import productTypes from './productsTypes';
 
 // set initial state 
 const initialState = {

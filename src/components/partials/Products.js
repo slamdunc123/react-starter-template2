@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import {
     readProducts
-} from '../../redux/product/productActions';
+} from '../../redux/products/productsActions';
 
 // styles 
 import './Products.scss';

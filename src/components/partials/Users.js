@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import { getUsers } from '../../redux/user/userActions'
+import { getUsers } from '../../redux/users/usersActions'
 
 const Users = ({ users, getUsers }) => {
   useEffect(() => {

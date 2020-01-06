@@ -2,7 +2,7 @@ import {
   GET_USERS_REQUEST,
   GET_USERS_SUCCESS,
   GET_USERS_FAILURE
-} from './userTypes'
+} from './usersTypes'
 
 const initialState = {
   users: [],

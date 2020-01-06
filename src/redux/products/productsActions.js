@@ -1,8 +1,8 @@
 // types 
-import productTypes from './productTypes';
+import productTypes from './productsTypes';
 
 // data 
-import productData from './productData'
+import productData from './productsData'
 
 // READ_PRODUCTS
 export const readProducts = () => {
